@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "expense-record",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
