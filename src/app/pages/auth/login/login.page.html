@@ -1,0 +1,110 @@
+<ion-content color="primary" padding>
+  <form #form="ngForm" (ngSubmit)="logIn(form)" autocomplete="off">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div style="text-align: center">
+            <h3>Login</h3>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input
+                name="email"
+                type="email"
+                placeholder="your@email.com"
+                ngModel
+                required
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input
+                name="password"
+                type="password"
+                placeholder="Password"
+                ngModel
+                required
+              ></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-button
+              size="large"
+              type="submit"
+              [disabled]="form.invalid"
+              expand="block"
+              >Login</ion-button
+            >
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <ion-col style="text-align: center">
+          <span>or</span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <div class="google-btn">
+            <div class="google-icon-wrapper">
+              <img
+                class="google-icon"
+                src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+              />
+            </div>
+            <p class="btn-text"><b>Sign in with google</b></p>
+          </div>
+        </ion-col>
+        <ion-col size="12">
+          <div text-center>
+            If you don't have an account, please
+            <a routerLink="/registration"> register</a> first!
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
+
+<!-- <ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" #email required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button
+          type="submit"
+          (click)="logIn(email, password)"
+          expand="block"
+          >Login</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </form>
+
+  <span class="divider line one-line">or</span>
+
+  <ion-row>
+    <form>
+      <ion-row>
+        <ion-col>
+          <ion-button
+            type="submit"
+            color="danger"
+            (click)="authService.GoogleAuth()"
+            expand="block"
+          >
+            Login with Google
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-row>
+</ion-content> -->
